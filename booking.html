@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your beauty treatment at Glamour Salon. From nails to haircuts, makeup to massages, we have the perfect service for you. Schedule today!">
+    <title>Book Your Beauty Appointment at Glamour Salon - Nails, Hair, Makeup & More</title>
+    <link rel="stylesheet" href="css/salon.css"> <!-- Link to CSS -->
+    <script src="js/form.js" defer></script> <!-- Link to JS for dynamic service selection -->
+</head>
+
+<body> <!-- Parent -->
+    <section class="container2"> <!-- Parent -->
+        <header> <!-- Parent -->
+            <!-- Logo -->
+            <div class="logo"> <!-- Parent -->
+                <img src="photos/logogirl.png" alt="Salon Logo"> <!-- Child -->
+            </div>
+
+            <!-- Salon Name -->
+            <div class="salon-name">GLAMOUR</div> <!-- Child -->
+
+            <!-- Hamburger Icon -->
+            <div class="hamburger">&#9776;</div> <!-- Child -->
+
+            <!-- Navigation Menu -->
+            <ul class="topnav"> <!-- Parent -->
+                <li><a href="index.html">ABOUT</a></li> <!-- Child -->
+                <li><a href="services.html">SERVICES</a></li> <!-- Child -->
+                <li><a href="cosmetics-shop.html">COSMETICS</a></li> <!-- Child -->
+                <li><a href="contact.html">CONTACT</a></li> <!-- Child -->
+                <li><a href="booking.html">BOOK</a></li> <!-- Child -->
+            </ul>
+        </header>
+    </section>
+
+    <main> <!-- Parent -->
+        <h1>Book Your Appointment at Glamour Salon</h1> <!-- Child -->
+
+        <form action="mailto:youremail@xxx.xxx" method="post" autocomplete="off" novalidate> <!-- Parent -->
+            <!-- Full Name -->
+            <div class="form-group"> <!-- Parent -->
+                <label for="fullname" class="label">Full Name: <span>*</span></label> <!-- Child -->
+                <input type="text" name="fullname" id="fullname" placeholder="Enter Full Name" maxlength="30" required class="text-input"> <!-- Child -->
+            </div>
+
+            <!-- Email -->
+            <div class="form-group"> <!-- Parent -->
+                <label for="email" class="label">Email: <span>*</span></label> <!-- Child -->
+                <input type="email" name="email" id="email" placeholder="someone@domain.com" required class="text-input"> <!-- Child -->
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group"> <!-- Parent -->
+                <label for="phone" class="label">Phone Number: <span>*</span></label> <!-- Child -->
+                <input type="tel" name="phone" id="phone" placeholder="Enter Phone Number" required class="text-input"> <!-- Child -->
+            </div>
+
+            <!-- Service Category -->
+            <div class="form-group"> <!-- Parent -->
+                <label for="serviceCategory" class="label">Select a Service Category: <span>*</span></label> <!-- Child -->
+                <select name="serviceCategory" id="serviceCategory" onchange="showServices()" required class="text-input"> <!-- Child -->
+                    <option value="" disabled selected>Choose a Category</option> <!-- Child -->
+                    <option value="nails">Nails</option> <!-- Child -->
+                    <option value="makeup">Makeup</option> <!-- Child -->
+                    <option value="hair">Hair</option> <!-- Child -->
+                    <option value="massage">Massage</option> <!-- Child -->
+                    <option value="waxing">Waxing</option> <!-- Child -->
+                    <option value="spa">Spa</option> <!-- Child -->
+                </select>
+            </div>
+
+            <!-- Service Selection -->
+            <div class="form-group" id="serviceSection" style="display:none;"> <!-- Parent -->
+                <label for="service" class="label">Select a Service: <span>*</span></label> <!-- Child -->
+                <select name="service" id="service" required class="text-input"> <!-- Child -->
+                    <option value="" disabled selected>Choose a Service</option> <!-- Child -->
+                </select>
+            </div>
+
+            <!-- Appointment Date -->
+            <div class="form-group"> <!-- Parent -->
+                <label for="date" class="label">Preferred Date: <span>*</span></label> <!-- Child -->
+                <input type="date" name="date" id="date" required class="text-input"> <!-- Child -->
+            </div>
+
+            <!-- Appointment Time -->
+            <div class="form-group"> <!-- Parent -->
+                <label for="time" class="label">Preferred Time: <span>*</span></label> <!-- Child -->
+                <select name="time" id="time" required class="text-input"> <!-- Child -->
+                    <option value="" disabled selected>Select a Time</option> <!-- Child -->
+                    <option value="10:30">10:30</option> <!-- Child -->
+                    <option value="11:00">11:00</option> <!-- Child -->
+                    <option value="11:30">11:30</option> <!-- Child -->
+                    <option value="12:00">12:00</option> <!-- Child -->
+                    <option value="12:30">12:30</option> <!-- Child -->
+                    <option value="13:00">13:00</option> <!-- Child -->
+                    <option value="13:30">13:30</option> <!-- Child -->
+                    <option value="14:00">14:00</option> <!-- Child -->
+                    <option value="14:30">14:30</option> <!-- Child -->
+                    <option value="15:00">15:00</option> <!-- Child -->
+                    <option value="15:30">15:30</option> <!-- Child -->
+                    <option value="16:00">16:00</option> <!-- Child -->
+                    <option value="16:30">16:30</option> <!-- Child -->
+                    <option value="17:00">17:00</option> <!-- Child -->
+                    <option value="17:30">17:30</option> <!-- Child -->
+                    <option value="18:00">18:00</option> <!-- Child -->
+                    <option value="18:30">18:30</option> <!-- Child -->
+                    <option value="19:00">19:00</option> <!-- Child -->
+                    <option value="19:30">19:30</option> <!-- Child -->
+                    <option value="20:00">20:00</option> <!-- Child -->
+                </select>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="form-group checkbox-group"> <!-- Parent -->
+                <input type="checkbox" name="signup" id="signup"> <!-- Child -->
+                <label for="signup">Sign up for our Newsletter</label> <!-- Child -->
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group"> <!-- Parent -->
+                <input type="submit" value="Book Appointment" class="submit-btn"> <!-- Child -->
+            </div>
+        </form>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer"> <!-- Parent -->
+        <p>© 2025 Glamour. All rights reserved</p> <!-- Child -->
+    </footer>
+
+    <!-- Link to JavaScript -->
+    <script defer src="burgermenu.js"></script> <!-- Child -->
+    <script defer src="services.js"></script> <!-- Child -->
+    <script defer src="time.js"></script> <!-- Child -->
+</body>
+</html>
